@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  background-color: #fef6d9;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 320px;
+  background-color: #fdc603;
+}
+
+h1 {
+  font-family: "Autour One";
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(23, 22, 22);
+  text-align: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2d1111;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerTitleContainerStyle {
+  width: 100%;
+  align-items: center;
+}
+
+.headerTintColor {
+  color: #fff;
+}
+
+.loginButton {
+  background-color: #ee59bbfc;
+  color: "#fff";
+}
+
+.signInButton {
+  background-color: #fdc603;
+}
+
+button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  margin: 1rem;
+  width: 8rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.logoContainer {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* container {
+    flex: 1,
+    alignItems: "center",
+    // justifyContent: "center",
+    padding: 10,
+    backgroundColor: "#FFFBED",
+  },
+
+
+  textContainer: {
+    marginBottom: 80,
+    alignItems: "center",
+  },
+  titleText: {
+    fontSize: 20,
+    fontWeight: "normal",
+    color: "#000",
+    textAlign: "center",
+    fontFamily: "AutourOneRegular",
+  },
+
+
+ */
