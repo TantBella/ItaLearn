@@ -8,12 +8,12 @@ import CreateAccount from "../components/CreateAccount";
 const SignUp = () => {
   return (
     <>
-      <div>
+      <div className="container">
         <div>
-          <h1>Skapa konto</h1>
+          <h1 style={{ color: "#ee59bbfc" }}>Skapa konto</h1>
         </div>
         <div>
-          <button className="signInButton">
+          <button className="yellowButton">
             <Link to="/"> Backa </Link>
           </button>
         </div>

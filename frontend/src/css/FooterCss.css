@@ -1,0 +1,17 @@
+.footerDiv {
+  border-top: 2px solid #b399a584;
+  padding: 2rem 0;
+  margin: 0 2rem;
+}
+
+.footerDiv a {
+  font-size: 0.5rem;
+  color: #312b2f;
+  letter-spacing: 1px;
+  margin: 0.5rem;
+}
+
+.containerFooter {
+  display: grid;
+  grid-template-columns: 40% 40%;
+}

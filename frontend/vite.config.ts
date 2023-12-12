@@ -6,11 +6,11 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // server: {
-  //   proxy: {
-  //     "/api": "http://localhost:3000/",
-  //     "/addpet": "http://localhost:3000/",
-  //     "/buypet": "http://localhost:3000/",
-  //   },
-  // },
+  server: {
+    proxy: {
+      "/api": "http://localhost:3000/",
+      "/createusers": "http://localhost:3000/",
+       "/signin": "http://localhost:3000/",
+    },
+  },
 })
