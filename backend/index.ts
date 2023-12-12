@@ -3,6 +3,9 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
 import { Client } from 'pg';
+import getcat from './routes/getcat'
+import getusers from './routes/createusers'
+import signin from './routes/signin'
 
 const port = process.env.PORT || 3000;
 
@@ -19,11 +22,14 @@ app.use(express.json());
 
 
 client.connect();
+app.use(getcat);
+app.use(getusers);
+app.use(signin);
 
 
 // app.get('/api', async (_request, response) => {
 //   try {
-//     const { rows } = await client.query('SELECT * FROM petstore');
+//     const { rows } = await client.query('SELECT * FROM italearncategories');
 //     response.json(rows);
 //   } catch (error) {
 //     console.error('Error fetching data from the database:', error);
