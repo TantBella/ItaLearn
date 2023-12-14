@@ -3,11 +3,14 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
 import { Client } from 'pg';
-import getcat from './routes/getcat'
-import postcategory from './routes/postcategory'
-import deletecategory from './routes/deletecategory'
-import getusers from './routes/createusers'
-import signin from './routes/signin'
+import getcat from './routes/getcat';
+import postcategory from './routes/postcategory';
+import putcategory from './routes/putcategory';
+import deletecategory from './routes/deletecategory';
+import getwords from './routes/getwords'
+import postwords from './routes/postwords';
+import getusers from './routes/createusers';
+import signin from './routes/signin';
 
 const port = process.env.PORT || 3000;
 
@@ -25,7 +28,10 @@ app.use(express.json());
 
 client.connect();
 app.use(getcat);
+app.use(getwords)
+app.use(postwords);
 app.use(postcategory);
+app.use(putcategory)
 app.use(deletecategory);
 app.use(getusers);
 app.use(signin);
