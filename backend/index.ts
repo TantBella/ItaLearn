@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 import path from 'path';
 import { Client } from 'pg';
 import getcat from './routes/getcat'
+import postcategory from './routes/postcategory'
+import deletecategory from './routes/deletecategory'
 import getusers from './routes/createusers'
 import signin from './routes/signin'
 
@@ -23,6 +25,8 @@ app.use(express.json());
 
 client.connect();
 app.use(getcat);
+app.use(postcategory);
+app.use(deletecategory);
 app.use(getusers);
 app.use(signin);
 
