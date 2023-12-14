@@ -11,11 +11,14 @@ import Gdpr from "./components/GDPR";
 import AccountConfirmed from "./components/AccountConfirmed";
 import Landing from "./pages/Landing";
 import Admin from "./pages/Admin";
-import AdmCat from "./components/admin/AdmCat";
 import AdmWords from "./components/admin/AdmWords";
+import PostWord from "./components/admin/PostWord";
+import AdmCat from "./components/admin/AdmCat";
 import DeleteCat from "./components/admin/DeleteCat";
 import PostCat from "./components/admin/PostCat";
 import PutCat from "./components/admin/PutCat";
+import PutWord from "./components/admin/PutWord";
+import DeleteWord from "./components/admin/DeleteWord";
 
 function Root() {
   return (
@@ -61,6 +64,18 @@ function App() {
         {
           element: <AdmWords />,
           path: "/adminwords",
+        },
+        {
+          element: <PostWord />,
+          path: "/addword",
+        },
+        {
+          element: <PutWord />,
+          path: "/wordchange",
+        },
+        {
+          element: <DeleteWord />,
+          path: "/deleteword",
         },
         {
           element: <StartPage />,

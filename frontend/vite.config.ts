@@ -15,6 +15,10 @@ export default defineConfig({
       "/addcategory": "http://localhost:3000/",
       "/categorychange": "http://localhost:3000/",
       "/deletecat": "http://localhost:3000/",
+      "/glosor": "http://localhost:3000/",
+      "/addword": "http://localhost:3000/",
+      "/wordchange": "http://localhost:3000/",
+      "/deleteword": "http://localhost:3000/",
 
     },
   },

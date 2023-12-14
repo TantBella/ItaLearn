@@ -8,11 +8,20 @@ const AdmWords = () => {
       <div className="container">
         <div>
           <button className="yellowButton">
-            <Link to="/admin"> Tillbaka till adminsidan </Link>
+            <Link to="/admin"> Tillbaka till admin-start </Link>
           </button>
         </div>
         <div>
-          <h1>Välj endpoint</h1>
+          <h1>Arbeta med glosorna: </h1>
+          <button className="pinkButton">
+            <Link to="/addword"> Lägg till </Link>
+          </button>
+          <button className="pinkButton">
+            <Link to="/wordchange"> Ändra</Link>
+          </button>
+          <button className="pinkButton">
+            <Link to="/deleteword"> Radera</Link>
+          </button>
         </div>
       </div>
     </>

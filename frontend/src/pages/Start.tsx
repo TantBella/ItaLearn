@@ -13,10 +13,10 @@ const StartPage = () => {
       </div>
       <div className="buttonContainer">
         <button className="yellowButton">
-          <Link to="/signup">SIGN UP </Link>
+          <Link to="/signup">Skapa konto </Link>
         </button>
         <button className="pinkButton">
-          <Link to="/signin"> LOG IN </Link>
+          <Link to="/signin"> Logga in </Link>
         </button>
       </div>
     </div>
