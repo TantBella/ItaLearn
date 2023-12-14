@@ -10,6 +10,12 @@ import SignUp from "./pages/SignUp";
 import Gdpr from "./components/GDPR";
 import AccountConfirmed from "./components/AccountConfirmed";
 import Landing from "./pages/Landing";
+import Admin from "./pages/Admin";
+import AdmCat from "./components/admin/AdmCat";
+import AdmWords from "./components/admin/AdmWords";
+import DeleteCat from "./components/admin/DeleteCat";
+import PostCat from "./components/admin/PostCat";
+import PutCat from "./components/admin/PutCat";
 
 function Root() {
   return (
@@ -32,6 +38,30 @@ function App() {
   const router = createHashRouter([
     {
       children: [
+        {
+          element: <Admin />,
+          path: "/admin",
+        },
+        {
+          element: <AdmCat />,
+          path: "/admincategory",
+        },
+        {
+          element: <PostCat />,
+          path: "/addnewcategory",
+        },
+        {
+          element: <PutCat />,
+          path: "/categorychange",
+        },
+        {
+          element: <DeleteCat />,
+          path: "/deletecategory",
+        },
+        {
+          element: <AdmWords />,
+          path: "/adminwords",
+        },
         {
           element: <StartPage />,
           path: "/",

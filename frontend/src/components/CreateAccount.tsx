@@ -44,7 +44,7 @@ const CreateAccount = () => {
 
     console.log("Values from the form:", { formvalues });
 
-    fetch("/getcat", {
+    fetch("/createusers", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
