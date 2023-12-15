@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface User {
@@ -11,6 +11,13 @@ const LogIn = () => {
   const [us_password, setPassword] = useState("");
   const navigate = useNavigate();
   localStorage.setItem("loggedIn", JSON.stringify(false));
+
+  useEffect(() => {
+    const loggedIn = JSON.parse(localStorage.getItem("loggedIn") || "false");
+    if (loggedIn) {
+      navigate("/benvenuto");
+    }
+  }, [navigate]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();

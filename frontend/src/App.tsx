@@ -5,20 +5,23 @@ import Logo from "./assets/logo.png";
 // import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import StartPage from "./pages/Start";
+import Admin from "./admin/Admin";
+import AdmWords from "./admin/AdmWords";
+import PostWord from "./admin/PostWord";
+import AdmCat from "./admin/AdmCat";
+import DeleteCat from "./admin/DeleteCat";
+import PostCat from "./admin/PostCat";
+import PutCat from "./admin/PutCat";
+import PutWord from "./admin/PutWord";
+import DeleteWord from "./admin/DeleteWord";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
-import Gdpr from "./components/GDPR";
-import AccountConfirmed from "./components/AccountConfirmed";
 import Landing from "./pages/Landing";
-import Admin from "./pages/Admin";
-import AdmWords from "./components/admin/AdmWords";
-import PostWord from "./components/admin/PostWord";
-import AdmCat from "./components/admin/AdmCat";
-import DeleteCat from "./components/admin/DeleteCat";
-import PostCat from "./components/admin/PostCat";
-import PutCat from "./components/admin/PutCat";
-import PutWord from "./components/admin/PutWord";
-import DeleteWord from "./components/admin/DeleteWord";
+import AccountConfirmed from "./components/AccountConfirmed";
+import Settings from "./pages/Settings";
+import Gdpr from "./components/GDPR";
+import CatWords from "./components/CatWords";
+import ChoosePractise from "./pages/ChoosePractise";
 
 function Root() {
   return (
@@ -94,12 +97,24 @@ function App() {
           path: "/success",
         },
         {
+          element: <Settings />,
+          path: "/settings",
+        },
+        {
           element: <Gdpr />,
           path: "/gdpr",
         },
         {
           element: <Landing />,
           path: "/benvenuto",
+        },
+        {
+          element: <ChoosePractise />,
+          path: "/choose",
+        },
+        {
+          element: <CatWords />,
+          path: "/category/:categoryId",
         },
       ],
       element: <Root />,

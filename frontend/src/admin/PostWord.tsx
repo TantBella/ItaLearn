@@ -16,7 +16,7 @@ const PostWord = () => {
   const navigate = useNavigate();
   const [swedish, setSwedish] = useState<string>("");
   const [italian, setItalian] = useState<string>("");
-  const [category_id, setCategoryid] = useState<number>();
+  const [category_id, setCategoryid] = useState<number>(0);
 
   const handleCategory = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -38,7 +38,7 @@ const PostWord = () => {
       .then((apiResponse) => {
         if (apiResponse.status === 201) {
           console.log("Word created successfully");
-          navigate("/admin");
+          navigate("/adminwords");
         } else {
           console.error("Error creating word:", apiResponse);
         }

@@ -19,6 +19,7 @@ export default defineConfig({
       "/addword": "http://localhost:3000/",
       "/wordchange": "http://localhost:3000/",
       "/deleteword": "http://localhost:3000/",
+      // "/verifyToken": "http://localhost:3000/",
 
     },
   },
