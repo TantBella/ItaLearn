@@ -15,7 +15,7 @@ const CatWords = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`/api/category/${categoryId}`);
+        const response = await fetch(`/api/glosor/${categoryId}`);
         const result: Word[] = await response.json();
         setWords(result);
       } catch (error) {
@@ -29,7 +29,7 @@ const CatWords = () => {
   return (
     <>
       <div className="container">
-        <div className="ordIKategoriContainer">
+        <div className="wordContainer">
           <h2>Orden i vald kategori:</h2>
           <ul>
             {words.map((word: Word) => (

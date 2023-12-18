@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve"
+  },
+  "include": ["**/*.ts", "**/*.tsx", "component/SignIn.feature"]
+}
