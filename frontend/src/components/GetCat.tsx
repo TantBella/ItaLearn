@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../css/GetCatCss.css";
 
@@ -30,12 +30,16 @@ const GetCat = () => {
         <div className="getcatContainer">
           <h2>Välj kategori:</h2>
           <div className="getcatDiv">
-            {categories.map((category: ItaCategories) => (
-              <Link key={category.id} to={`/category/${category.id}`}>
+            {categories.map((category: ItaCategories, index: number) => (
+              <Link
+                key={category.id ?? index}
+                to={`/category/${category.category}`}
+              >
                 {category.category}
               </Link>
             ))}
-            {categories.length === 0 && <p> Inga kategorier finns ? </p>}
+
+            {categories.length === 0 && <p> Inga kategorier finns</p>}
           </div>
         </div>
       </div>

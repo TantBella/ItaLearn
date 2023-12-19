@@ -1,4 +1,3 @@
-// OrdIKategori.tsx
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
@@ -9,13 +8,13 @@ interface Word {
 }
 
 const CatWords = () => {
-  const { categoryId } = useParams();
+  const { category } = useParams();
   const [words, setWords] = useState<Word[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`/api/glosor/${categoryId}`);
+        const response = await fetch(`/glosor/:category`);
         const result: Word[] = await response.json();
         setWords(result);
       } catch (error) {
@@ -24,7 +23,7 @@ const CatWords = () => {
     };
 
     fetchData();
-  }, [categoryId]);
+  }, [category]);
 
   return (
     <>
