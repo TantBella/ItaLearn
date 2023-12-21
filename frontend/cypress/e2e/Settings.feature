@@ -1,4 +1,3 @@
-// Test som skapas innan komponent
 Feature: Usersettings.
 
 Det finns ett textfält med användarnamn, ett med email och ett med lösenord. Det
@@ -11,13 +10,13 @@ radera ditt konto. Detta kan ej ångras." klickar man på Jag är säker så rad
 kontot ur databsaen och man hamnar på startsidan. Trycker man avbryt så
 försvinner rutan och man är på inställningssidan igen.
 
-  Scenario: Jag vill ändra sitt lösenord.
+  Scenario: Jag vill ändra mitt lösenord.
     Given Jag är inloggad och på inställningar-sidan.
     When Jag trycker på ändra-knappen och skriver ett nytt lösenord.
     Then Lösenordet ändras i databasen och det kommer en ruta som säger "Dina
     nya uppgifter har sparats". Sidan uppdateras med de nya uppgifterna.
 
-  Scenario: JAg vill radera mitt användarkonto
+  Scenario: Jag vill radera mitt användarkonto
     Given Jag är inloggad och på inställningar-sidan.
-    When JAg klickar på radera konto-knappen och sedan klickar på Jag är säker.
+    When Jag klickar på radera konto-knappen och sedan klickar på Jag är säker.
     Then Kontot raderas ur databasen och jag hamnar på startsidan.

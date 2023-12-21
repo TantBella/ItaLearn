@@ -40,6 +40,6 @@ When("Jag trycker på radera konto-knappen och sen på bekräfta.", () => {
 })
 
 Then(" Kontot raderas ur databasen och jag hamnar på startsidan.", () => {
-   cy.get('[data-testid="confirmation-dialog"]').should('contain', 'Dina nya uppgifter har sparats');
+   cy.get('[data-testid="confirmation-dialog"]').should('contain', 'Ditt konto är raderat.');
       cy.url().should('eq', '/');
 })

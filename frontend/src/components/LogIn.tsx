@@ -56,6 +56,7 @@ const LogIn = () => {
     <>
       <div>
         <input
+          id="username"
           placeholder={"Användarnamn"}
           value={us_name}
           onChange={(e) => {
@@ -63,6 +64,7 @@ const LogIn = () => {
           }}
         />
         <input
+          id="password"
           type="password"
           placeholder={"Lösenord"}
           value={us_password}
@@ -72,6 +74,7 @@ const LogIn = () => {
         />
         <div>
           <button
+            id="loginButton"
             className="pinkButton"
             onClick={handleLogin}
             style={{ color: "white" }}

@@ -41,15 +41,15 @@ const Settings = () => {
             <Link to="/"> Backa </Link>
           </button>
         </div>
-        {loggedIn ? (
-          <div>
-            <h1 style={{ color: "#ee59bbfc" }}>Profil-inställningar</h1>
-          </div>
-        ) : (
-          <div>
+        {/* {loggedIn ? ( */}
+        <div>
+          <h1 style={{ color: "#ee59bbfc" }}>Profil-inställningar</h1>
+        </div>
+        {/* ) : ( */}
+        {/* <div>
             <LogIn />
           </div>
-        )}
+        )} */}
       </div>
     </>
   );
