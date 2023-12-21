@@ -6,9 +6,9 @@ import { client } from '../index';
 
 const router = express.Router();
 
-router.get('/glosor/:category', async (request, response) => {
+router.get('/glosor/:glosor', async (request, response) => {
   try {
-    const { category } = request.params;
+    const { glosor } = request.params;
 
     const query = `
       SELECT italearnwords.swedish, italearnwords.italian
@@ -17,7 +17,7 @@ router.get('/glosor/:category', async (request, response) => {
       WHERE italearncategories.category = $1;
     `;
 
-    const { rows } = await client.query(query, [category]);
+    const { rows } = await client.query(query, [glosor]);
     response.json(rows);
   } catch (error) {
     console.error('Error fetching data from the database:', error);
