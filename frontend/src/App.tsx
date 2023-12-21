@@ -22,6 +22,7 @@ import Settings from "./pages/Settings";
 import Gdpr from "./components/GDPR";
 import CatWords from "./components/CatWords";
 import ChoosePractise from "./pages/ChoosePractise";
+import Categories from "./pages/Categories";
 
 function Root() {
   return (
@@ -97,10 +98,6 @@ function App() {
           path: "/success",
         },
         {
-          element: <Settings />,
-          path: "/settings",
-        },
-        {
           element: <Gdpr />,
           path: "/gdpr",
         },
@@ -109,12 +106,20 @@ function App() {
           path: "/benvenuto",
         },
         {
+          element: <Categories />,
+          path: "/choosecategory",
+        },
+        {
+          element: <Settings />,
+          path: "/settings",
+        },
+        {
           element: <ChoosePractise />,
           path: "/choose",
         },
         {
           element: <CatWords />,
-          path: "/category/:categoryId",
+          path: "/glosor/:glosor",
         },
       ],
       element: <Root />,

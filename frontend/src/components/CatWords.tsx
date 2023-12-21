@@ -1,3 +1,4 @@
+import "../css/CatWordsCss.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
@@ -8,13 +9,14 @@ interface Word {
 }
 
 const CatWords = () => {
-  const { category } = useParams();
+  const { glosor } = useParams();
   const [words, setWords] = useState<Word[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`/glosor/:category`);
+        console.log("Kategori: " + glosor);
+        const response = await fetch(`/glosor/${glosor}`);
         const result: Word[] = await response.json();
         setWords(result);
       } catch (error) {
@@ -23,21 +25,23 @@ const CatWords = () => {
     };
 
     fetchData();
-  }, [category]);
+  }, [glosor]);
 
   return (
     <>
       <div className="container">
         <div className="wordContainer">
           <h2>Orden i vald kategori:</h2>
-          <ul>
-            {words.map((word: Word) => (
-              <li key={word.italearnid}>
-                {word.swedish} - {word.italian}
-              </li>
-            ))}
-            {words.length === 0 && <p> Inga ord finns i denna kategori. </p>}
-          </ul>
+          <div className="glosList">
+            <ul>
+              {words.map((word: Word) => (
+                <li id="glosor" key={word.italearnid}>
+                  {word.swedish} - {word.italian}
+                </li>
+              ))}
+              {words.length === 0 && <p> Inga ord finns i denna kategori. </p>}
+            </ul>
+          </div>
         </div>
       </div>
     </>

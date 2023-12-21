@@ -1,0 +1,11 @@
+.glosList {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#glosor {
+  list-style: none;
+  text-align: left;
+  padding: 1rem;
+}

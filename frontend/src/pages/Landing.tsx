@@ -1,10 +1,12 @@
-import GetCat from "../components/GetCat";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
     <div>
-      <h1>Hej användare och en avatar bild</h1>
-      <GetCat />
+      <h1>Välkommeni tillbaka användare och en avatar bild</h1>
+      <button>
+        <Link to="/choosecategory"> Nu kör vi! Andiamo! </Link>
+      </button>
     </div>
   );
 };

@@ -9,7 +9,7 @@ const AccountConfirmed = () => {
           <p>Välkommen, benvenuto användare och en bild på vald avatar.</p>
           <p style={{ margin: "1rem" }}>Nu kör vi!</p>
           <button className="pinkButton">
-            <Link to="/benvenuto"> Gå vidare </Link>
+            <Link to="/choosecategory"> Gå vidare </Link>
           </button>
         </div>
       </div>

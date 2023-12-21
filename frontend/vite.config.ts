@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-// import dns from "dns"
-// dns.setDefaultResultOrder("ipv4first")
+import dns from "dns"
+dns.setDefaultResultOrder("ipv4first")
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -17,7 +17,7 @@ export default defineConfig({
       "/categorychange": "http://localhost:3000/",
       "/deletecat": "http://localhost:3000/",
       "/glosor": "http://localhost:3000/",
-      "/glosor/:category": "http://localhost:3000/",
+      "/glosor/:glosor": "http://localhost:3000/",
       "/addword": "http://localhost:3000/",
       "/wordchange": "http://localhost:3000/",
       "/deleteword": "http://localhost:3000/",

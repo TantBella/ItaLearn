@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given("Jag är på kategorisidan", () => {
-  cy.visit("http://localhost:5173/#/benvenuto");
+  cy.visit("http://localhost:5173/#/choosecategory");
   cy.get(".getcatContainer").should("exist");
 });
 

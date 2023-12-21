@@ -73,22 +73,26 @@ const CreateAccount = () => {
       <div className="inputForm">
         <form>
           <input
+            id="username"
             placeholder={"Username"}
             value={us_name}
             onChange={(e) => setUserName(e.target.value)}
           />
           <input
+            id="email"
             placeholder={"Email"}
             value={us_email}
             onChange={(e) => setUsEmail(e.target.value)}
           />
           <input
+            id="password"
             type={"password"}
             placeholder={"Password"}
             value={us_password}
             onChange={(e) => setUsPassword(e.target.value)}
           />
           <input
+            id="repeatpassword"
             type={"password"}
             placeholder={"Repeat Password"}
             value={repeatPassword}
@@ -127,6 +131,7 @@ const CreateAccount = () => {
           </div>
           <div>
             <button
+              id="createacc"
               className="yellowButton"
               onClick={handleFormValues}
               style={{ color: "white" }}

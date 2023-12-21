@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import LogIn from "../components/LogIn";
+// import LogIn from "../components/LogIn";
 
 const Settings = () => {
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ const Settings = () => {
       <div className="container">
         <div>
           <button className="yellowButton">
-            <Link to="/"> Backa </Link>
+            <Link to="/benvenuto"> Backa </Link>
           </button>
         </div>
         {/* {loggedIn ? ( */}

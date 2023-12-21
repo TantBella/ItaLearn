@@ -30,14 +30,20 @@ const GetCat = () => {
         <div className="getcatContainer">
           <h2>Välj kategori:</h2>
           <div className="getcatDiv">
-            {categories.map((category: ItaCategories, index: number) => (
-              <Link
-                key={category.id ?? index}
-                to={`/category/${category.category}`}
-              >
-                {category.category}
-              </Link>
-            ))}
+            {categories.map(
+              (
+                category: // har lagt in denna koden för att: Each child in a list should have a unique "key" prop
+                ItaCategories,
+                index: number
+              ) => (
+                <Link
+                  key={category.id ?? index}
+                  to={`/glosor/${category.category}`}
+                >
+                  {category.category}
+                </Link>
+              )
+            )}
 
             {categories.length === 0 && <p> Inga kategorier finns</p>}
           </div>
