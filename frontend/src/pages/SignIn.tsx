@@ -7,7 +7,7 @@ const SignIn = () => {
     <>
       <div>
         <div>
-          <Link to="/"> Backa </Link>
+          <Link to="/"> Start </Link>
         </div>
         <div>
           <h1>Logga in</h1>

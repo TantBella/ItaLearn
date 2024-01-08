@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 interface User {
   us_name: string;
   us_password: string;
+  selectedavatar: string;
 }
 
 const LogIn = () => {
@@ -37,9 +38,17 @@ const LogIn = () => {
       });
 
       if (userResponse.status === 200) {
+        const respone = await userResponse.json();
+        const userData: User = respone.userData;
+        console.log("Test:", userData);
         localStorage.setItem("loggedIn", JSON.stringify(true));
+        localStorage.setItem("us_name", JSON.stringify(userData.us_name));
+        localStorage.setItem(
+          "selectedavatar",
+          JSON.stringify(userData.selectedavatar)
+        );
+
         console.log("är inloggad:", localStorage.getItem("loggedIn"));
-        console.log("Uppgifterna stämde, du är inloggad");
         navigate("/benvenuto");
       } else {
         const errorData = await userResponse.json();

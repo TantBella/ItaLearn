@@ -94,3 +94,15 @@ a:hover {
   color: #2d1111;
   font-weight: 600;
 }
+
+input::-webkit-input-placeholder {
+  color: #b399a5;
+}
+
+input:-moz-placeholder {
+  color: #b399a5;
+}
+
+input:not(:placeholder-shown) {
+  color: rgb(16, 14, 14);
+}

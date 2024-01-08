@@ -10,6 +10,6 @@ When("Jag väljer en kategori", () => {
 });
 
 Then("Jag blir skickad till en sida med glosor i den kategorin", () => {
-  cy.url().should("include", "/category/");
-  cy.get(".CatWords").should("exist");
+  cy.url().should("include", "/glosor/");
+  cy.get(".glosList").should("exist");
 });

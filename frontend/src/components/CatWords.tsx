@@ -1,6 +1,7 @@
 import "../css/CatWordsCss.css";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import PinkArrow from "../assets/pinkArrow.png";
 
 interface Word {
   swedish: string;
@@ -11,6 +12,8 @@ interface Word {
 const CatWords = () => {
   const { glosor } = useParams();
   const [words, setWords] = useState<Word[]>([]);
+  const [selectedCategory, setSelectedCategory] =
+    useState<string>("Välj en kategori");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,6 +22,7 @@ const CatWords = () => {
         const response = await fetch(`/glosor/${glosor}`);
         const result: Word[] = await response.json();
         setWords(result);
+        setSelectedCategory(glosor);
       } catch (error) {
         console.error("Error fetching words in category:", error);
       }
@@ -31,7 +35,12 @@ const CatWords = () => {
     <>
       <div className="container">
         <div className="wordContainer">
-          <h2>Orden i vald kategori:</h2>
+          <div className="headContainer">
+            <Link to="/choosecategory">
+              <img className="pinkarrow" src={PinkArrow} />
+            </Link>
+            <h2>{selectedCategory}:</h2>
+          </div>
           <div className="glosList">
             <ul>
               {words.map((word: Word) => (

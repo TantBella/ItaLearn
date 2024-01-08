@@ -8,10 +8,9 @@ const Footer = () => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   function logOut() {
-    // localStorage.setItem("loggedIn");
-    localStorage.removeItem("userToken");
     setLoggedIn(false);
-    console.log("Du är utloggad");
+    localStorage.removeItem("loggedIn");
+    console.log("är inloggad:", localStorage.getItem("loggedIn"));
     navigate("/");
   }
 
@@ -29,4 +28,5 @@ const Footer = () => {
     </div>
   );
 };
+
 export default Footer;
