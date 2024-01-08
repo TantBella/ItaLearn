@@ -17,11 +17,12 @@ CREATE TABLE users (
   id serial PRIMARY KEY,
   us_name text UNIQUE NOT NULL,
   us_email text UNIQUE NOT NULL,
-  us_password text NOT NULL
+  us_password text NOT NULL,
+  selectedAvatar text NOT NULL
 );
 
-ALTER TABLE users
-ADD COLUMN selectedAvatar text NOT NULL;
+-- ALTER TABLE users
+-- ADD COLUMN selectedAvatar text NOT NULL;
 
 CREATE TABLE italearncategories (
   categoryId serial PRIMARY KEY,
