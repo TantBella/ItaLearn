@@ -10,6 +10,7 @@ export default defineConfig({
     proxy: {
       "/api": "http://localhost:3000/",
       "/createusers": "http://localhost:3000/",
+      "/updateuser": "http://localhost:3000/",
       "/signin": "http://localhost:3000/",
       "/settings": "http://localhost:3000/",
       "/admin": "http://localhost:3000/",

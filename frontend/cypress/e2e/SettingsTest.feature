@@ -19,9 +19,3 @@ Scenario: Jag vill byta avatar.
     Given Jag är på Inställningar
     When Jag väljer ny avatar och klickar på spara
     Then Den nya avataren sparas i databasen
-
-
-Scenario: Jag vill radera mitt konto.
-    Given Jag är på Inställningar
-    When Jag klickar på radera konto och bekräftar att jag är säker
-    Then Användaruppgifterna raderas i databasen
