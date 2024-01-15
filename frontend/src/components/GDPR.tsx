@@ -1,8 +1,13 @@
 import "../css/gdprCss.css";
+import { Link } from "react-router-dom";
+import PinkArrow from "../assets/pinkArrow.png";
 
 const Gdpr = () => {
   return (
     <div className="container">
+      <Link to="/benvenuto">
+        <img className="pinkarrow" src={PinkArrow} />
+      </Link>
       <div className="gdpr">
         <h2>GDPR-information:</h2>
         <p>

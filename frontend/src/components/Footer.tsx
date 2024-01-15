@@ -18,12 +18,11 @@ const Footer = () => {
     <div className="footerDiv">
       <div className="containerFooter">
         <Link to="/gdpr">GDPR</Link>
-        <Link to="/settings">Inställningar</Link>
-        <Link to="/gdpr">Villkor</Link>
 
         <Link to="/" onClick={logOut}>
           Logga ut
         </Link>
+        <Link to="/gdpr">Villkor</Link>
       </div>
     </div>
   );

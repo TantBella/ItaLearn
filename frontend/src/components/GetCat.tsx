@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../css/GetCatCss.css";
+import PinkArrow from "../assets/pinkArrow.png";
 
 interface ItaCategories {
   id: number;
@@ -28,7 +29,12 @@ const GetCat = () => {
     <>
       <div className="container">
         <div className="getcatContainer">
-          <h2>Välj kategori:</h2>
+          <div className="headContainer">
+            <Link to="/benvenuto">
+              <img className="pinkarrow" src={PinkArrow} />
+            </Link>
+            <h2>Välj kategori:</h2>
+          </div>
           <div className="getcatDiv">
             {categories.map(
               (

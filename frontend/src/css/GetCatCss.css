@@ -12,9 +12,8 @@
   margin: 1rem;
   display: flex;
   flex-direction: row;
-
   border-radius: 5px;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   border: 2px solid #fdc603;
   font-weight: 400;
   padding: 0.8rem;
