@@ -15,6 +15,7 @@ import deletewords from './routes/deletewords';
 import getusers from './routes/createusers';
 // import localstorage from './routes/localstorage'
 import signin from './routes/signin';
+import putusers from './routes/putusers'
 
 const port = process.env.PORT || 3000;
 
@@ -40,6 +41,7 @@ app.use(postcategory);
 app.use(putcategory);
 app.use(deletecategory);
 app.use(getusers);
+app.use(putusers);
 // app.use(localstorage);
 app.use(signin);
 
